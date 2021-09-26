@@ -4,6 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title>Travel Blog</title>
+  <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 

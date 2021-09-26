@@ -1,0 +1,83 @@
+/* my styles */
+body {
+    font-family: sans-serif;
+}
+a:hover:not(nav a:hover, footer .social a, #blog .social a) {
+    opacity: 0.7;
+    transition: 200ms;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+}
+.mw-1080 {
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+header {
+    max-height: 750px;
+}
+.img-header {
+    z-index: -2;
+}
+.img-cover {
+    z-index: -1;
+}
+div.social a:hover img,
+.swiper-slide-active > div img {
+    filter: brightness(0) invert(1);
+}
+footer .social a:hover img {
+    filter: invert(70%) sepia(74%) saturate(521%) hue-rotate(347deg)
+        brightness(104%) contrast(97%);
+    transition: 200ms;
+}
+.item-feature p,
+.date-post,
+.caption-blog p,
+.subscribe input {
+    color: #868383;
+}
+.by {
+    color: #696969;
+}
+.content-popular-post .author-post,
+.content-popular-post .date-post {
+    font-size: 10px;
+}
+.wrapper-video {
+    background-image: url("../../public/img/video.png");
+    height: 420px;
+}
+.swiper-pagination-bullet {
+    background-color: rgba(255, 169, 2, 0.7) !important;
+}
+.swiper-pagination-bullet-active {
+    background-color: #ffa902 !important;
+}
+.swiper-button-next,
+.swiper-button-prev {
+    top: 40%;
+}
+#slider-insta .swiper-slide-active:hover div.cover-post-insta {
+    opacity: 1 !important;
+    transition: 300ms !important;
+}
+.min-w-240 {
+    min-width: 240px;
+}
+.scroll-slider::-webkit-scrollbar {
+    display: none;
+}
+.scroll-slider {
+    padding: 7px;
+    scrollbar-width: none;
+    scrollbar-width: thin;
+}
