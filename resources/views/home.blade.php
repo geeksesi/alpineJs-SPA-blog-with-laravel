@@ -7,7 +7,7 @@
 
     <x-home.feature/>
 
-    <x-home.blog/>
+    <x-home.blog :latest="$latest" :popular="$popular" />
 
     <x-home.video/>
 
