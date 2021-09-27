@@ -26,7 +26,7 @@ class CommentFactory extends Factory
             "text" => $this->faker->text(50),
             "post_id" => rand(1, 50),
             "author_thumbnail" =>
-                "public/images/av" .
+                "public/images/av/" .
                 $this->faker->image(
                     "public/storage/images/av",
                     640,
