@@ -1,10 +1,9 @@
 @extends('layouts.base')
 
-
 @section('main')
     <x-home.header/>
 
-    <x-home.categories/>
+    <x-home.categories :categories="$categories" />
 
     <x-home.feature/>
 
