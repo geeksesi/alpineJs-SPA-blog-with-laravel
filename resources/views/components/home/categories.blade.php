@@ -8,7 +8,7 @@
             <div class="swiper-slide overflow-hidden rounded-lg">
                 <a href="{{route("category", ["slug"=>$category->slug])}}">
                     <img class="mx-auto transform hover:scale-125 transition duration-300"
-                        src="{{empty($category->thumbnail)?asset("img/category1.png"):storage::url($category->thumbnail)}}"
+                        src="{{empty($category->thumbnail)?asset("img/category1.png"): Storage::url($category->thumbnail)}}"
                         alt="{{$category->name}}">
                     <p class="absolute top-1/2 w-full text-center text-white text-lg -mt-3">{{$category->name}}</p>
                 </a>

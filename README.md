@@ -1,5 +1,10 @@
 # installation
 
+## Composer 
+```
+composer i
+```
+
 ## Env :
 
 ```
@@ -10,6 +15,11 @@ then change to :
 
 ```
 DB_CONNECTION=sqlite
+```
+
+## Storage :
+```
+php artisan storage:link
 ```
 
 ## Database :
@@ -33,7 +43,7 @@ php artisan db:seed
 ## View
 
 ```
-npm run build
+npm run dev
 ```
 
 ## Lunch
