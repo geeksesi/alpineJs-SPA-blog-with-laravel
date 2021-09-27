@@ -1,10 +1,10 @@
 <?php
 
-namespace App\View\Components\Home\blog\contact;
+namespace App\View\Components\Home\blog;
 
 use Illuminate\View\Component;
 
-class social extends Component
+class tags extends Component
 {
     /**
      * Create a new component instance.
@@ -23,6 +23,6 @@ class social extends Component
      */
     public function render()
     {
-        return view('components.home.blog.contact.social');
+        return view("components.home.blog.tags");
     }
 }

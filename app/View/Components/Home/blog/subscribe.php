@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components\Home\blog\contact;
+namespace App\View\Components\Home\blog;
 
 use Illuminate\View\Component;
 
@@ -23,6 +23,6 @@ class subscribe extends Component
      */
     public function render()
     {
-        return view('components.home.blog.contact.subscribe');
+        return view("components.home.blog.subscribe");
     }
 }

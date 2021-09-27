@@ -1,19 +1,20 @@
 <?php
 
-namespace App\View\Components\Home\blog\contact;
+namespace App\View\Components\Home\blog;
 
 use Illuminate\View\Component;
 
-class popular-posts extends Component
+class PopularPosts extends Component
 {
+    public $posts;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($posts)
     {
-        //
+        $this->posts = $posts;
     }
 
     /**
@@ -23,6 +24,6 @@ class popular-posts extends Component
      */
     public function render()
     {
-        return view('components.home.blog.contact.popular-posts');
+        return view("components.home.blog.popular-posts");
     }
 }
