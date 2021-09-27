@@ -24,6 +24,15 @@ class CategoryFactory extends Factory
         $name = $this->faker->jobTitle();
         return [
             "name" => $name,
+            "thumbnail" =>
+                "public/images/categories/" .
+                $this->faker->image(
+                    "public/storage/images/categories",
+                    170,
+                    220,
+                    null,
+                    false
+                ),
         ];
     }
 }
