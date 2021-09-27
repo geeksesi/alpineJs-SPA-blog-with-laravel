@@ -23,6 +23,6 @@ class contact extends Component
      */
     public function render()
     {
-        return view('components.home.blog.contact');
+        return view("components.home.blog.contact");
     }
 }

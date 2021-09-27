@@ -6,14 +6,16 @@ use Illuminate\View\Component;
 
 class posts extends Component
 {
+    public $posts;
+
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($posts)
     {
-        //
+        $this->posts = $posts;
     }
 
     /**
@@ -23,6 +25,6 @@ class posts extends Component
      */
     public function render()
     {
-        return view('components.home.blog.posts');
+        return view("components.home.blog.posts");
     }
 }

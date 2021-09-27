@@ -6,14 +6,18 @@ use Illuminate\View\Component;
 
 class blog extends Component
 {
+    public $latest;
+    public $popular;
+
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($latest, $popular)
     {
-        //
+        $this->latest = $latest;
+        $this->popular = $popular;
     }
 
     /**
@@ -23,6 +27,6 @@ class blog extends Component
      */
     public function render()
     {
-        return view('components.home.blog');
+        return view("components.home.blog");
     }
 }
