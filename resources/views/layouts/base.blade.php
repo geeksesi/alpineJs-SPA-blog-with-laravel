@@ -34,21 +34,8 @@
 </head>
 
 <body>
-
-  <!-- Add your site or application content here -->
-  <x-home.header/>
-
-  <x-home.categories/>
-
-  <x-home.feature/>
   
-  <x-home.blog/>
-
-  <x-home.video/>
-
-  <x-home.instagram/>
-
-  <x-home.footer/>
+  @yield('main')
 
   <!-- swiper slider  -->
   <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
