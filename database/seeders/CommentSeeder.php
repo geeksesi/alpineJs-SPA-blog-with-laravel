@@ -15,8 +15,8 @@ class CommentSeeder extends Seeder
      */
     public function run()
     {
-        if (!Storage::exists("public/image/av")) {
-            Storage::disk("local")->makeDirectory("public/image/av");
+        if (!Storage::exists("public/images/av")) {
+            Storage::disk("local")->makeDirectory("public/images/av");
         }
         Comment::truncate();
         Comment::factory()

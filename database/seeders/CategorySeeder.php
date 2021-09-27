@@ -15,8 +15,8 @@ class CategorySeeder extends Seeder
      */
     public function run()
     {
-        if (!Storage::exists("public/image/categories")) {
-            Storage::disk("local")->makeDirectory("public/image/categories");
+        if (!Storage::exists("public/images/categories")) {
+            Storage::disk("local")->makeDirectory("public/images/categories");
         }
         Category::truncate();
         Category::factory()
