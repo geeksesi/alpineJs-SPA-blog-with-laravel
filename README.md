@@ -1,5 +1,17 @@
 # installation
 
+## Env :
+
+```
+cp .env.sample .env
+```
+
+then change to :
+
+```
+DB_CONNECTION=sqlite
+```
+
 ## Database :
 
 ```
