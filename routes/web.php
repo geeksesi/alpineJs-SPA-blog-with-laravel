@@ -16,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get("/", [HomeController::class, "index"]);
-Route::get("/post/{id}", [PostController::class, "index"]);
-Route::get("/cat/{id}", [CategoryController::class, "index"]);
+Route::get("/", [HomeController::class, "index"])->name("home");
+Route::get("/post/{slug}", [PostController::class, "show"])->name("post");
+Route::get("/cat/{slug}", [CategoryController::class, "show"])->name(
+    "category"
+);
