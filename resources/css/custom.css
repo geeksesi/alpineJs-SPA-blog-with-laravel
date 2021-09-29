@@ -81,3 +81,6 @@ footer .social a:hover img {
     scrollbar-width: none;
     scrollbar-width: thin;
 }
+.bg-dark{
+    background: #1e1e28;
+}

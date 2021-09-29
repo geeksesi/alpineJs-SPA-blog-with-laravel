@@ -18,3 +18,4 @@
 </div>
 
 @endforeach
+<x-pagination/>
