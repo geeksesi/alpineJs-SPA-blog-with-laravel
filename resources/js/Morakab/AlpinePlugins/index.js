@@ -1,3 +1,3 @@
 import onEventRender from "./onEventRender";
 
-export default [onEventRender];
+export default { onEventRender };

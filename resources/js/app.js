@@ -1,8 +1,8 @@
 import Alpine from "alpinejs";
-import { AlpinePlugins } from "./Morakab";
+import Morakab from "./Morakab";
 
-AlpinePlugins.forEach((plugin) => {
-    Alpine.plugin(plugin);
+Object.keys(Morakab.AlpinePlugins).forEach((plugin) => {
+    Alpine.plugin(Morakab.AlpinePlugins[plugin]);
 });
 
 window.Alpine = Alpine;

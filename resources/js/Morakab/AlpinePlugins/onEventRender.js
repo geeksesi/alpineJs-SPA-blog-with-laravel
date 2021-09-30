@@ -1,6 +1,8 @@
 export default (Alpine) => {
-    Alpine.directive("onEventRender", (el, v, a) => {
-        console.log(v);
-        console.log(a);
+    Alpine.directive("on-event-render", (el, { expression }) => {
+        el.addEventListener(expression, function (event) {
+            console.log(event);
+            console.log(this);
+        });
     });
 };

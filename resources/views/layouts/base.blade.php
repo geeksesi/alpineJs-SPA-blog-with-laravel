@@ -22,14 +22,6 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <!-- end of swiper slider  -->
 
-  <!-- tailwind -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="tailwind.css">
-  <!-- end of tailwind -->
-
-  <link rel="stylesheet" href="css/main.css">
-  <!-- my styles -->
-
   <meta name="theme-color" content="#fafafa">
 </head>
 
@@ -38,6 +30,7 @@
   @yield('main')
 
   <!-- swiper slider  -->
+  <script src="{{asset('js/app.js')}}"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script>
@@ -81,17 +74,8 @@
       spaceBetween: 25,
       centeredSlides: true,
     });
-  </script> <!-- setting swiper slider -->
-  <!-- end of swiper slider -->
-  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
+  </script> 
+
 </body>
 
 </html>

@@ -3211,7 +3211,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _onEventRender__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./onEventRender */ "./resources/js/Morakab/AlpinePlugins/onEventRender.js");
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ([_onEventRender__WEBPACK_IMPORTED_MODULE_0__["default"]]);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  onEventRender: _onEventRender__WEBPACK_IMPORTED_MODULE_0__["default"]
+});
 
 /***/ }),
 
@@ -3226,10 +3228,50 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (Alpine) {
-  Alpine.directive("onEventRender", function (el, v, a) {
-    console.log(v);
-    console.log(a);
+  Alpine.directive("on-event-render", function (el, _ref) {
+    var expression = _ref.expression;
+    el.addEventListener(expression, function (event) {
+      console.log(event);
+      console.log(this);
+    });
   });
+});
+
+/***/ }),
+
+/***/ "./resources/js/Morakab/Core/aTagHandler.js":
+/*!**************************************************!*\
+  !*** ./resources/js/Morakab/Core/aTagHandler.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (disabler) {
+  document.querySelectorAll("a:not(.".concat(disabler, ")")).forEach(function (e) {
+    console.log(this);
+    console.log(e);
+  });
+});
+
+/***/ }),
+
+/***/ "./resources/js/Morakab/Core/index.js":
+/*!********************************************!*\
+  !*** ./resources/js/Morakab/Core/index.js ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _aTagHandler__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./aTagHandler */ "./resources/js/Morakab/Core/aTagHandler.js");
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  aTagHandler: _aTagHandler__WEBPACK_IMPORTED_MODULE_0__["default"]
 });
 
 /***/ }),
@@ -3245,9 +3287,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _AlpinePlugins__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AlpinePlugins */ "./resources/js/Morakab/AlpinePlugins/index.js");
+/* harmony import */ var _Core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Core */ "./resources/js/Morakab/Core/index.js");
+
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  AlpinePlugins: _AlpinePlugins__WEBPACK_IMPORTED_MODULE_0__["default"]
+  AlpinePlugins: _AlpinePlugins__WEBPACK_IMPORTED_MODULE_0__["default"],
+  Core: _Core__WEBPACK_IMPORTED_MODULE_1__["default"]
 });
 
 /***/ }),
@@ -3263,8 +3308,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Morakab__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Morakab */ "./resources/js/Morakab/index.js");
 
 
-_Morakab__WEBPACK_IMPORTED_MODULE_1__.AlpinePlugins.forEach(function (plugin) {
-  alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].plugin(plugin);
+Object.keys(_Morakab__WEBPACK_IMPORTED_MODULE_1__["default"].AlpinePlugins).forEach(function (plugin) {
+  alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].plugin(_Morakab__WEBPACK_IMPORTED_MODULE_1__["default"].AlpinePlugins[plugin]);
 });
 window.Alpine = alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"];
 alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();

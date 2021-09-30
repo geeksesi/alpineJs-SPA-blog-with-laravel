@@ -1,2 +1,4 @@
 import AlpinePlugins from "./AlpinePlugins";
-export default { AlpinePlugins };
+import Core from "./Core";
+
+export default { AlpinePlugins: AlpinePlugins, Core: Core };
